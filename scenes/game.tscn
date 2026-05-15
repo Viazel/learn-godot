@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://da7mh7oj8seme" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dffgoo8m3kecf" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://d0vnvk1twsrw8" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://cucnhdh1pqtl8" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -268,3 +269,13 @@ autoplay = &"move"
 
 [node name="Slime" parent="." unique_id=1493201161 instance=ExtResource("6_p57ef")]
 position = Vector2(38, 32)
+
+[node name="Label" type="Label" parent="." unique_id=501951554]
+offset_left = -134.0
+offset_top = -9.0
+offset_right = -42.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.23137255, 0.1764706, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
