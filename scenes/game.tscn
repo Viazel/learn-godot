@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://lhp7p1xusso6"]
 
+[ext_resource type="Script" uid="uid://b8d28mon3bo0m" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://ctlrl3vxtmqgh" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://d3brc8sysfxul" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://5els0sacayjo" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -217,6 +218,24 @@ _data = {
 
 [node name="Game" type="Node2D" unique_id=1739636959]
 
+[node name="GameManager" type="Node" parent="." unique_id=527314442]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=1902862950]
+offset_left = 339.0
+offset_top = 2.0
+offset_right = 433.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.23137255, 0.1764706, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "You collected X
+coins"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="TileMap" type="TileMap" parent="." unique_id=857007182]
 position = Vector2(-2, -1)
 tile_set = SubResource("TileSet_lbhrr")
@@ -270,7 +289,9 @@ autoplay = &"move"
 [node name="Slime" parent="." unique_id=1493201161 instance=ExtResource("6_p57ef")]
 position = Vector2(38, 32)
 
-[node name="Label" type="Label" parent="." unique_id=501951554]
+[node name="Labels" type="Node" parent="." unique_id=692353363]
+
+[node name="Label" type="Label" parent="Labels" unique_id=501951554]
 offset_left = -134.0
 offset_top = -9.0
 offset_right = -42.0
